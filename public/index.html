@@ -1,195 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>G PROSTHODONTICS</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>G PROSTHODONTICS</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        <!-- Favicons -->
+        <link href="assets/img/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-</head>
+        <!-- Main CSS File -->
+        <link href="assets/css/main.css" rel="stylesheet">
+    </head>
 
-  <body>
-    <section id="referral" class="referral section">
-      <div class="container section-title">
-          <h2>Doctor's Referral Form</h2>
-      </div>
-      <div class="container">
-        <form id="referralForm" action="/send" method="POST" class="email-form">  
-              <div class="row">
+    <body>   
+                
+        <!-- Appointment Section -->
+        <section id="appointment" class="appointment section">
 
-                  <div class="col-md-4 mt-3 form-group">
-                      <label for="date">Date:</label>
-                      <input type="date" id="date" name="date" class="form-control" required>
-                  </div>
-                  <div class="col-md-4 mt-3 form-group">
-                      <label for="name">Patient Name:</label>
-                      <input type="text"  id="name" name="patient_name" class="form-control"required>
-                  </div>
-                  <div class="col-md-4 mt-3 form-group">
-                      <label for="date_of_birth">Date of Birth:</label>
-                      <input type="date" id="date_of_birth" name="date_of_birth" class="form-control" required>
-                  </div>
-              </div>
-              <div class="row">
+            <!-- Section Title -->
+            <div class="container section-title">
+            <h2>Book Your Appointment Today!</h2>
+            <p>
+                At our dental clinic, we understand the importance of your time and convenience. That's why we've made scheduling your dental appointment easier than ever. Whether you're a new patient or a returning one, our online appointment booking system is designed to be quick, efficient, and hassle-free. Simply fill out the form with your details, choose a time that works best for you, and our team will ensure you receive the personalized care you deserve. Your oral health is our priority, and we look forward to welcoming you to our clinic for a comfortable and professional dental experience.
+            </p>
+            </div><!-- End Section Title -->
+        
+            <div class="container">
+        
+                <form id="appointmentForm" action="/send" method="POST" class="email-form">
+                    <div class="row">
+                        <div class="col-md-4 form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
+                        </div>
+                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+                        </div>
+                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" required="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 form-group mt-3">
+                            <select name="reason" id="reason" class="form-select" required="">
+                            <option value="">Reason For Your Visit</option>
+                            <option value="Full_Mouth_Reconstruction">Full Mouth Reconstruction</option>
+                            <option value="Smile_Makeover">Smile Makeover</option>
+                            <option value="Dentures">Dentures</option>
+                            <option value="Immediate_Dentures">Immediate Dentures</option>
+                            <option value="Partial_Dentures">Partial Dentures</option>
+                            <option value="Denture_Reline">Denture Reline</option>
+                            <option value="Implant_Overdenture">Implant Overdenture</option>
+                            <option value="Dental_Bridges">Dental Bridges</option>
+                            <option value="Dental_Crown">Dental Crown</option>
+                            <option value="Bruxism_Treatment">Bruxism Treatment</option>
+                            <option value="Not_Sure">Not Sure</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6 form-group mt-3">
+                            <select name="bestTime" id="bestTime" class="form-select" required="">
+                            <option value="">Best Time For Appointment</option>
+                            <option value="Morning">Morning</option>
+                            <option value="Afternoon">Afternoon</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <div class="form-group mt-3">
+                        <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+                    </div>
 
-                  <div class="col-md-4 mt-3 form-group">
-                      <label for="patient_address">Patient Address:</label>
-                      <input type="text" name="patient_address" class="form-control" required>
-                  </div>
+                    <div class="mt-3">
+                        <div class="text-center"><button class="form-button-submit p-2 rounded border" type="submit">Make an Appointment</button></div>
+                    </div>
+                    
+                </form>
+        
+            </div>
+        
+        </section><!-- /Appointment Section -->
 
-                  <div class="col-md-4 mt-3 form-group">
-                      <label for="patient_phone">Patient Phone Number:</label>
-                      <input type="tel" name="patient_phone" class="form-control" required>
-                  </div>
-                  <div class="col-md-4 mt-3 form-group">
-                      <label for="medical_conditions">Medical Conditions:</label>
-                      <input type="text" name="medical_conditions" class="form-control" required>
-                  </div>
+        <footer id="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+            
+                        <div class="col-lg-3 col-md-6 footer-info text-center">
+                        <img src="assets/img/g-logo.png" alt="">
+                        <h4 class="pt-3">PROSTHODONTICS</h4>
+                        </div>
+            
+                        <div class="col-lg-3 col-md-6 footer-links">
+                        <ul>
+                            <li><i class="fa-regular fa-hospital"></i> <a href="index.html#hero">Home</a></li>
+                            <li><i class="fa-solid fa-user-doctor"></i> <a href="index.html#about">About</a></li>
+                            <li><i class="fas fa-hospital-user"></i> <a href="index.html#newPatient">New Patient</a></li>
+                        </ul>
+                        </div>
+            
+                        <div class="col-lg-3 col-md-6 footer-links">
+                        <ul>
+                            <li><i class="fa-solid fa-vial-circle-check"></i> <a href="index.html#general">General</a></li>
+                            <li><i class="fas fa-pills"></i> <a href="index.html#contact">Contact</a></li>
+                        </ul>
+                        </div>
+            
+                        <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Contact Us</h4>
+                        <p>
+                            303-1901 Rosser Ave,<br>
+                            Burnaby, BC V5C 6R6<br>
+                            <strong>Phone:</strong> +1 (604) 230-2700<br>
+                            <strong>Email:</strong> info@drgebril.com
+                        </p>
+            
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+        
+            <div class="container">
+                
+                <div class="copyright">
+                    <p> &copy;2024 <span class="copyRight">G PROSTHODONTICS</span> . Designed by <br>
+                        <a href="https://fawzymoawad.com/"><span class="copyRight">FM</span></a>
+                    </p>
+                </div>
+        
+            </div>
+        </footer><!-- End Footer -->
+    
+    
+        <!-- Scroll Top -->
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-              </div>
-              <div class="row">
+        <!-- Preloader -->
+        <div id="preloader"></div>
 
-                  <div class="col-md-4 mt-3 form-group">
-                      <label for="reason_for_referral">Reason for Referral:</label>
-                      <textarea class="form-control" name="reason_for_referral" rows="5" required></textarea>
-                  </div>
-                  <div class="col-md-4 mt-3 form-group">
-                      <label for="special_requests">Special Requests:</label>
-                      <textarea class="form-control" name="special_requests" rows="5" required></textarea>
-                  </div>
-                  <div class="col-md-4 mt-3 form-group">
-                      <label for="radiographs[]">Radiographs:</label>
-                      <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="with_patient" id="rediographs1" name="radiographs[]">
-                          <label class="form-check-label" for="rediographs1">With Patient</label>
-                      </div>
-                      <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="mailed" id="rediographs2" name="radiographs[]">
-                          <label class="form-check-label" for="rediographs2">Mailed</label>
-                      </div>
-                      <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="taken_not_sent" id="rediographs3" name="radiographs[]">
-                          <label class="form-check-label" for="rediographs3">Taken, Not Sent</label>
-                      </div>
-                      <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="not_taken" id="rediographs4" name="radiographs[]">
-                          <label class="form-check-label" for="rediographs4">Not Taken</label>
-                      </div>
-                      <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="emailed" id="rediographs5" name="radiographs[]">
-                          <label class="form-check-label" for="rediographs5">Emailed</label>
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-md-4 mt-3 form-group">
-                      <input type="text" name="referring_dentist" class="form-control" placeholder="Referring Dentist Dr." required>
-                  </div>
-                  <div class="col-md-4 mt-3 form-group">
-                      <input type="text" name="dentist_address" class="form-control" placeholder="Address" required>
-                  </div>
-                  <div class="col-md-4 mt-3 form-group">
-                      <input type="tel" name="dentist_phone" class="form-control" placeholder="Phone" required>
-                  </div>
-              </div>
-              <div class="mt-5">
-                  <div class="text-center"><button class="form-button-submit p-2 rounded border" type="submit">Submit Referral</button></div>
-              </div>
-          </form>
-      </div>
-    </section>
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-    <footer id="footer">
-      <div class="footer-top">
-          <div class="container">
-          <div class="row">
-  
-              <div class="col-lg-3 col-md-6 footer-info text-center">
-              <img src="assets/img/g-logo.png" alt="">
-              <h4 class="pt-3">PROSTHODONTICS</h4>
-              </div>
-  
-              <div class="col-lg-3 col-md-6 footer-links">
-              <ul>
-                  <li><i class="fa-regular fa-hospital"></i> <a href="index.html#hero">Home</a></li>
-                  <li><i class="fa-solid fa-user-doctor"></i> <a href="index.html#about">About</a></li>
-                  <li><i class="fas fa-hospital-user"></i> <a href="index.html#newPatient">New Patient</a></li>
-              </ul>
-              </div>
-  
-              <div class="col-lg-3 col-md-6 footer-links">
-              <ul>
-                  <li><i class="fa-solid fa-vial-circle-check"></i> <a href="index.html#general">General</a></li>
-                  <li><i class="fas fa-pills"></i> <a href="index.html#contact">Contact</a></li>
-              </ul>
-              </div>
-  
-              <div class="col-lg-3 col-md-6 footer-contact">
-              <h4>Contact Us</h4>
-              <p>
-                  303-1901 Rosser Ave,<br>
-                  Burnaby, BC V5C 6R6<br>
-                  <strong>Phone:</strong> +1 (604) 230-2700<br>
-                  <strong>Email:</strong> info@drgebril.com
-              </p>
-  
-              </div>
-  
-          </div>
-          </div>
-      </div>
-  
-      <div class="container">
-          
-          <div class="copyright">
-              <p> &copy;2024 <span class="copyRight">G PROSTHODONTICS</span> . Designed by <br>
-                  <a href="https://fawzymoawad.com/"><span class="copyRight">FM</span></a>
-              </p>
-          </div>
-  
-      </div>
-    </footer><!-- End Footer -->
-  
-  
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+        <!-- Main JS File -->
+        <script src="assets/js/main.js"></script>
 
-    <!-- Preloader -->
-    <div id="preloader"></div>
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/formHandler.js"></script>
-
-  </body>
+    </body>
 
 </html>

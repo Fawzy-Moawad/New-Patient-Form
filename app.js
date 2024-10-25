@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 
 // Route to handle form submission
 app.post('/send', (req, res) => {
-    const { name, email, subject, message } = req.body;
+    const { name, email, phone, reason, bestTime, message } = req.body;
 
     // Create a transporter
     const transporter = nodemailer.createTransport({
@@ -32,17 +32,17 @@ app.post('/send', (req, res) => {
         port: process.env.SMTP_PORT,
         secure: false, // true for 465, false for other ports
         auth: {
-            user: process.env.EMAIL, // Your Hostinger email address
-            pass: process.env.PASSWORD // Your Hostinger email password
+            user: process.env.EMAIL, // Your email address from .env
+            pass: process.env.PASSWORD // Your email password from .env
         }
     });
 
     // Email options
     const mailOptions = {
         from: process.env.EMAIL, // Your email address from .env
-        to: 'info@fun-canada.com',
-        subject: 'Contact Form',
-        text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`
+        to: 'info@drgebril.com', // The recipient email address
+        subject: 'New Appointment Request',
+        text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nReason for Visit: ${reason}\nBest Time for Appointment: ${bestTime}\nMessage: ${message || 'N/A'}` // Fallback to 'N/A' if the message is not provided
     };
 
     // Send email
@@ -52,7 +52,7 @@ app.post('/send', (req, res) => {
             return res.status(500).json({ message: 'Error sending email' });
         }
         console.log('Email sent:', info.response);
-        res.json({ message: 'Form sent successfully' }); // Send JSON response
+        res.json({ message: 'Appointment request sent successfully' }); // Send JSON response
     });
 });
 
